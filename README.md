@@ -36,3 +36,17 @@ displayFullImage() при первом вызове создаёт объект 
 Этот класс объединяет тестирование Proxy и Flyweight.
 Сначала проверяется работа Proxy на изображениях.
 Затем создаются маркеры и стили для Flyweight.
+
+При запуске кода в классе Main программа выведет следующее:
+Testing Proxy Pattern:
+Displaying cached thumbnail for: house1.jpg
+Displaying cached thumbnail for: house2.jpg
+Loading high-resolution image: house1.jpg
+Displaying full image: house1.jpg
+Displaying full image: house1.jpg
+
+Testing Flyweight Pattern:
+Marker at (10, 20) with icon: H, color: Red, label: Bold
+Marker at (15, 25) with icon: H, color: Red, label: Bold
+Marker at (30, 40) with icon: R, color: Blue, label: Italic
+
