@@ -1,0 +1,27 @@
+public interface Image {
+    void displayThumbnail();
+    void displayFullImage();
+}
+
+public class HighResolutionImage implements Image {
+    private String filename;
+
+    public HighResolutionImage(String filename) {
+        this.filename = filename;
+        loadImage();
+    }
+
+    private void loadImage() {
+        System.out.println("Loading high-resolution image: " + filename);
+    }
+
+    @Override
+    public void displayThumbnail() {
+        System.out.println("Displaying thumbnail for: " + filename);
+    }
+
+    @Override
+    public void displayFullImage() {
+        System.out.println("Displaying full image: " + filename);
+    }
+}
