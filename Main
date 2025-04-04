@@ -1,0 +1,25 @@
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Testing Proxy Pattern:");
+        Image image1 = new ImageProxy("house1.jpg");
+        Image image2 = new ImageProxy("house2.jpg");
+        
+        image1.displayThumbnail();
+        image2.displayThumbnail();
+        
+        image1.displayFullImage();
+        image1.displayFullImage(); // Second call should not reload
+        
+        System.out.println("\nTesting Flyweight Pattern:");
+        MarkerStyle hospitalStyle = MarkerFactory.getStyle("H", "Red", "Bold");
+        MarkerStyle restaurantStyle = MarkerFactory.getStyle("R", "Blue", "Italic");
+        
+        MapMarker hospital1 = new MapMarker(10, 20, hospitalStyle);
+        MapMarker hospital2 = new MapMarker(15, 25, hospitalStyle);
+        MapMarker restaurant1 = new MapMarker(30, 40, restaurantStyle);
+        
+        hospital1.display();
+        hospital2.display();
+        restaurant1.display();
+    }
+}
